@@ -1,16 +1,18 @@
 <!doctype html>
 <html>
-<head>
-  <meta charset="UTF-8" />
-  <title>API Docs</title>
-  <style>
-    body { margin: 0; }
-  </style>
-</head>
+  <head>
+    <title>API Reference</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <div id="app"></div>
 
-<body>
-  <div id="app"></div>
+    <script src="./standalone.js"></script>
 
-  <script type="module" src="./app.js"></script>
-</body>
+    <script>
+      Scalar.createApiReference(document.getElementById('app'), {
+        url: './openapi.json',
+      });
+    </script>
+  </body>
 </html>
